@@ -14,14 +14,14 @@ public class LoginController implements ILoginController{
         int loginCode = user.isValid();
         if(loginCode == 0)
         {
-            loginView.OnLoginError("Please enter Email");
+            loginView.OnLoginError("Por favor, ingrese un Email");
         }else  if (loginCode == 1){
-            loginView.OnLoginError("Please enter A valid Email");
+            loginView.OnLoginError("Ingrese un Email valido");
         } else  if (loginCode == 2)
         {
-            loginView.OnLoginError("Please enter Password");
+            loginView.OnLoginError("Por favor ingrese la contraseña");
         }else  if(loginCode == 3){
-            loginView.OnLoginError("Please enter Password greater the 6 char");
+            loginView.OnLoginError("Ingrese una contraseña mayor a 6 digitos");
         }
         else {
             loginView.OnLoginSuccess("login Successful");
